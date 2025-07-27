@@ -7,7 +7,7 @@ This is a full-stack Smart Booking application built using **Spring Boot (Java)*
 ## 📸 Screenshots
 
 ### 🔐 Login Page
-![Login](https://raw.githubusercontent.com/Marwan11500/smart-booking-frontend/main/screenshots/01-smart-booking.png)
+![Login](01-smart-booking.png)
 
 ### 🔐 Two-Factor Authentication
 ![2FA](https://raw.githubusercontent.com/Marwan11500/smart-booking-frontend/main/screenshots/02-smart-booking.png)
