@@ -1,0 +1,15 @@
+<div class="notification-container">
+    <h2>🔔 Notifications</h2>
+  
+    <ul *ngIf="notifications.length > 0; else noNotifications">
+      <li *ngFor="let n of notifications" class="notification-card">
+        <p><strong>{{ n.message }}</strong></p>
+        <p class="timestamp">{{ n.createdAt | date:'short' }}</p>
+      </li>
+    </ul>
+  
+    <ng-template #noNotifications>
+      <p>✅ You have no notifications right now.</p>
+    </ng-template>
+  </div>
+  

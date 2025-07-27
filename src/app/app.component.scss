@@ -1,0 +1,29 @@
+.app-header {
+  background-color: #1e3a8a; // blue
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .nav-bar {
+    a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+main {
+  padding: 2rem;
+}

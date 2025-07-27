@@ -1,0 +1,17 @@
+<div class="booking-history">
+  <h2>📅 Your Bookings</h2>
+
+  <ul *ngIf="bookings.length > 0; else noBookings">
+    <li *ngFor="let b of bookings" class="booking-card">
+      <p><strong>Resource:</strong> {{ b.resource.name }}</p>
+      <p><strong>Type:</strong> {{ b.resource.type }}</p>
+      <p><strong>Start:</strong> {{ b.startTime | date:'short' }}</p>
+      <p><strong>End:</strong> {{ b.endTime | date:'short' }}</p>
+      <p><strong>Status:</strong> {{ b.status }}</p>
+    </li>
+  </ul>
+
+  <ng-template #noBookings>
+    <p>🛑 You haven't made any bookings yet.</p>
+  </ng-template>
+</div>

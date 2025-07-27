@@ -1,0 +1,27 @@
+<div class="dashboard-container">
+  <h2>Welcome to the Dashboard</h2>
+
+  <!-- 🌟 Role-specific section -->
+  <div *ngIf="auth.getRole() === 'BUSINESS'" class="business-actions">
+    <button routerLink="/add-resource">➕ Add New Resource</button>
+  </div>
+
+  <div *ngIf="auth.getRole() === 'ADMIN'" class="admin-panel">
+    <p>🔐 Admin Panel Access</p>
+    <!-- You can add more admin tools here -->
+  </div>
+  
+  <!-- 💼 Shared Resource List -->
+  <h2>Available Resources</h2>
+  <ul *ngIf="resources.length" class="resource-list">
+    <li *ngFor="let resource of resources">
+      <div class="resource-card">
+        <p><strong>{{ resource.name }}</strong></p>
+        <p>{{ resource.type }}</p>
+        <button (click)="bookResource(resource.id)">Book</button>
+      </div>
+    </li>
+  </ul>
+
+  <p *ngIf="!resources.length">No resources available.</p>
+</div>
