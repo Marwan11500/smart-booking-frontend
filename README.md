@@ -1,59 +1,114 @@
-# SmartBookingFrontend
+# Smart Booking System
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+This is a full-stack Smart Booking application built using **Spring Boot (Java)** for the backend and **Angular** for the frontend. It supports booking resources such as cars, rooms, or doctors with user-friendly features including **JWT authentication**, **2FA**, **role-based access**, and **notifications**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🎓 Technologies Used
+
+### Backend (Java + Spring Boot)
+
+* Spring Boot
+* Spring Security with JWT
+* MySQL
+* JPA/Hibernate
+* Two-Factor Authentication (2FA) via Email
+* RESTful API
+
+### Frontend (Angular)
+
+* Angular 17 (with Standalone Components)
+* Angular Router
+* Reactive Forms
+* Angular Material
+* HTTP Interceptors
+
+---
+
+## ✨ Key Features
+
+### 🔐 Authentication & Security
+
+* Secure JWT-based login/registration
+* Two-Factor Authentication with email verification
+* Role-based access: `USER`, `OWNER`, `ADMIN`
+
+### 🏢 Booking Management
+
+* Book any available resource for a selected time
+* Overlap check and validation logic
+* View your bookings in a list
+
+### 📃 Resource Management
+
+* List all available resources
+* Admins/owners can add/manage their own
+
+### 📢 Notification Center
+
+* Shows notifications for actions like booking status
+* Automatically fetched for the current user
+
+---
+
+## 📅 How to Run Locally
+
+### 📃 Backend
 
 ```bash
+cd smart-booking-backend
+./mvnw spring-boot:run
+```
+
+* Make sure MySQL is running
+* Set DB credentials in `application.properties`
+
+### 📄 Frontend
+
+```bash
+cd smart-booking-frontend
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Visit: `http://localhost:4200`
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📣 Roles Overview
 
-```bash
-ng generate component component-name
-```
+| Role  | Permissions                                            |
+| ----- | ------------------------------------------------------ |
+| USER  | Book resources, view personal bookings & notifications |
+| OWNER | Manage resources they own                              |
+| ADMIN | Manage all resources & users                           |
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 📈 Project Structure
 
-## Building
+* **smart-booking-backend/**: Java backend with services, repositories, DTOs
+* **smart-booking-frontend/**: Angular app with modular, clean UI
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🚀 Why This Project?
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+This project showcases my ability to:
 
-## Running unit tests
+* Build production-ready full-stack applications
+* Implement secure login, 2FA, and access control
+* Work with real-world concepts like booking logic and resource availability
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## ✨ Author
 
-## Running end-to-end tests
+**Marwan Soltan**
+[GitHub @Marwan11500](https://github.com/Marwan11500)
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
+## 📅 License
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project is licensed under the MIT License.
